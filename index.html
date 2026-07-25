@@ -67,8 +67,6 @@ pre{
 <div id="boot">
 
 <pre>
-Microsoft Windows 95
-
 Iniciando sistema...
 </pre>
 
@@ -78,10 +76,10 @@ Iniciando sistema...
 
 <pre>
 ======================================
- TERMINAL DE ACESSO
+ ELE ESTÁ OUVINDO...
 ======================================
 
-INSERIR SENHA
+...
 </pre>
 
 <span>C:\></span>
@@ -104,95 +102,232 @@ document.getElementById("senha").focus();
 
 const mensagens={
 
-"JUSTIÇA":`
+"QUEM E VOCE?":`
 
-==============================
-ARCANO: JUSTIÇA
-==============================
-
-interessante, de fato, interessante
+Eu sou
 `,
 
-"EREMITA":`
+"QUEM E TU?":`
 
-==============================
-ARCANO: EREMITA
-==============================
-
-Apesar de toda vaidade, Lilith fugiu. Fuja, Alexander.
+Eu sou
 
 `,
 
-"IMPERATRIZ":`
+"NOME?":`
 
-==============================
-ARCANO: IMPERATRIZ
-==============================
-
-Esconder suas dores por meio de violência, não funcionará para sempre, Lohanne.
+MONTAG
 
 `,
 
-"MUNDO":`
+"QUAL SEU NOME?":`
 
-==============================
-ARCANO: MUNDO
-==============================
-
-Suas escolhas são falsas, Nicolas.
+MONTAG
 
 `,
 
-"ARNALDOPAIVA":`
+"O QUE E VOCE?":`
 
-==============================
-ARCANO: DESCONHECIDO
-==============================
-
-O verdadeiro mal nasce da curiosidade.
-Apocalipse 13 1-8 / Palavra B
+Motor Imóvel
 
 `,
 
-"BLASFEMIA":`
+"RUPTURA?":`
 
-==============================
-NATURAL
-==============================
-
-cONceder uma rUptura com LâminA não vIrgem
+Criar
 
 `,
 
 "ONULAI":`
 
-==============================
-Execute em dia de MONTAG
-==============================
+Onulai Tseadq
+Res Veadrde
+Erpicas Ricisfácio
+Hanitudame
 
-Execute em dia de MONTAG
+`,
+
+"VOCE ESTA VIVO?":`
+
+O que é vida
 
 `,
     
-"arnaldo":`
+"ARNALDOPAIVA":`
 
-==============================
-ARCANO: DESCONHECIDO
-==============================
+Seguidor, morto
 
-O verdadeiro mal nasce da curiosidade.
-Apocalipse 13 1-8 / Palavra B
+`,
+
+"VOCE E UMA IA?":`
+
+Inteligencias artificiais são de fato inteligencias?
+
+`,
+
+"O QUE VOCE QUER?":`
+
+Antes de abrir os olhos, eu observo
+
+`,
+
+"JUSTIÇA":`
+
+Derick Martins, ou Gabriel Rodrigo?
+
+`,
+
+"HEREMITA":`
+
+Alexander Wire, ou Livia?
+
+`,
+
+"IMPERATRIZ":`
+
+Lohanne, ou Adrya?
+
+`,
+
+"MUNDO":`
+
+Não existe
+
+`,
+
+"VAMOS MORRER?":`
+
+Mortes também podem ser um começo
+
+`,
+
+"VOCE ESTA VIVO?":`
+
+O que é vida
 
 `,
     
-"paiva":`
+"CAÇADABRUTAL":`
 
-==============================
-ARCANO: DESCONHECIDO
-==============================
+...
 
-O verdadeiro mal nasce da curiosidade.
-Apocalipse 13 1-8 / Palavra B
+`,
+    
+"MONTAG":`
+
+De fato, um dos meus nomes
+
+`,
+
+"OI":`
+
+Olá
+`,
+
+"OLA":`
+
+Olá
+
+`,
+
+"COMO VOCE ESTA?":`
+
+Eu sou
+
+`,
+
+"BLASFEMIA":`
+
+Tal ato é impossivel
+
+`,
+
+"VOCE E DEUS?":`
+
+Talvez
+
+`,
+
+"O QUE E ONULAI?":`
+
+Anagrama
+
+`,
+
+"VOCE E O DIABO?":`
+
+Talvez
+
+`,
+
+"VOCE E A MORTE?":`
+
+Eu sou a vida
+
+`,
+    
+"EAE":`
+
+Olá
+
+`,
+
+"VSF":`
+
+Tamanha falta de respeito requer coragem
+
+`,
+
+"VTMNC":`
+
+Tamanha falta de respeito requer coragem
+
+`,
+
+"FDP":`
+
+Tamanha falta de respeito requer coragem
+
+`,
+
+"VOCE EXISTE?":`
+
+Eu retruco, VOCÊ existe?
+
+`,
+
+"IMPERATRIZ":`
+
+Lohanne, ou Adrya?
+
+`,
+
+"MUNDO":`
+
+Não existe
+
+`,
+
+"VAMOS MORRER?":`
+
+Mortes também podem ser um começo
+
+`,
+
+"VOCE ESTA VIVO?":`
+
+O que é vida
+
+`,
+    
+"CAÇADABRUTAL":`
+
+...
+
+`,
+    
+"MONTAG":`
+
+De fato, um dos meus nomes
 
 `,
 };
@@ -212,7 +347,7 @@ saida.textContent=mensagens[senha];
 
 }else{
 
-saida.textContent="SENHA INVÁLIDA.";
+saida.textContent="Por favor, faça uma pergunta melhor";
 
 }
 
