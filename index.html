@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Terminal Arcanos</title>
+
+<style>
+
+body{
+    margin:0;
+    background:#000;
+    color:#FF0000;
+    font-family:Consolas, monospace;
+}
+
+#boot{
+
+    width:100vw;
+    height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+
+    font-size:22px;
+
+}
+
+#terminal{
+
+    display:none;
+
+    padding:20px;
+
+}
+
+input{
+
+    background:black;
+    color:#ff0000;
+
+    border:none;
+    outline:none;
+
+    font-family:inherit;
+    font-size:20px;
+
+    width:400px;
+
+}
+
+pre{
+
+    white-space:pre-wrap;
+
+    margin-top:20px;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div id="boot">
+
+<pre>
+Microsoft Windows 95
+
+Iniciando sistema...
+</pre>
+
+</div>
+
+<div id="terminal">
+
+<pre>
+======================================
+ TERMINAL DE ACESSO
+======================================
+
+INSERIR SENHA
+</pre>
+
+<span>C:\></span>
+<input id="senha" autofocus>
+
+<pre id="mensagem"></pre>
+
+</div>
+
+<script>
+
+setTimeout(()=>{
+
+document.getElementById("boot").style.display="none";
+document.getElementById("terminal").style.display="block";
+
+document.getElementById("senha").focus();
+
+},3000);
+
+const mensagens={
+
+"JUSTIÇA":`
+
+==============================
+ARCANO: JUSTIÇA
+==============================
+
+interessante, de fato, interessante
+`,
+
+"EREMITA":`
+
+==============================
+ARCANO: EREMITA
+==============================
+
+Apesar de toda vaidade, Lilith fugiu. Fuja, Alexander.
+
+`,
+
+"IMPERATRIZ":`
+
+==============================
+ARCANO: IMPERATRIZ
+==============================
+
+Esconder suas dores por meio de violência, não funcionará para sempre, Lohanne.
+
+`,
+
+"MUNDO":`
+
+==============================
+ARCANO: MUNDO
+==============================
+
+Suas escolhas são falsas, Nicolas.
+
+`,
+
+"ARNALDOPAIVA":`
+
+==============================
+ARCANO: DESCONHECIDO
+==============================
+
+O verdadeiro mal nasce da curiosidade.
+Apocalipse 13 1-8 / Palavra B
+
+`,
+
+"BLASFEMIA":`
+
+==============================
+NATURAL
+==============================
+
+cONceder uma rUptura com LâminA não vIrgem
+
+`,
+
+"ONULAI":`
+
+==============================
+Execute em dia de MONTAG
+==============================
+
+Execute em dia de MONTAG
+
+`,
+    
+"arnaldo":`
+
+==============================
+ARCANO: DESCONHECIDO
+==============================
+
+O verdadeiro mal nasce da curiosidade.
+Apocalipse 13 1-8 / Palavra B
+
+`,
+    
+"paiva":`
+
+==============================
+ARCANO: DESCONHECIDO
+==============================
+
+O verdadeiro mal nasce da curiosidade.
+Apocalipse 13 1-8 / Palavra B
+
+`,
+};
+
+const input=document.getElementById("senha");
+const saida=document.getElementById("mensagem");
+
+input.addEventListener("keydown",function(e){
+
+if(e.key!="Enter") return;
+
+const senha=input.value.toUpperCase().trim();
+
+if(mensagens[senha]){
+
+saida.textContent=mensagens[senha];
+
+}else{
+
+saida.textContent="SENHA INVÁLIDA.";
+
+}
+
+input.value="";
+
+});
+
+</script>
+
+</body>
+</html>
